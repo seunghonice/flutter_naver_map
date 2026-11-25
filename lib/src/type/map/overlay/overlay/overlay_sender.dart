@@ -20,7 +20,7 @@ mixin _NOverlaySender {
 
     dynamic lastValue;
 
-    for (final overlayController in _overlayControllers) {
+    for (final overlayController in List.of(_overlayControllers)) {
       lastValue = await overlayController.invokeMethod(query, messageable);
     }
 
